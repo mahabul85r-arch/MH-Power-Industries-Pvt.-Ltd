@@ -1,0 +1,132 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>export default function AffiliateWebsite() { 
+  const products = [ 
+  { 
+    name: 'Smart Watch', 
+    price: '₹1,999', 
+    desc: 'Premium smartwatch with health tracking.', 
+    image: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1200&auto=format&fit=crop',
+    link: '#' 
+   }, 
+   { 
+    name: 'Wireless Earbuds', 
+    price: '₹999', 
+    desc: 'Crystal clear sound and deep bass.', 
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop', 
+    link: '#'
+   },
+   {
+    name: 'Gaming Keyboard', 
+    price: '₹2,499', 
+    desc: 'RGB mechanical keyboard for gamers.', 
+    image: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=1200&auto=format&fit=crop', 
+    link: '#' 
+   }, 
+   { 
+    name: 'Bluetooth Speaker', 
+    price: '₹1,499', 
+    desc: 'Portable speaker with amazing sound.', 
+    image: 'https://images.unsplash.com/photo-1589003077984-894e133dabab?q=80&w=1200&auto=format&fit=crop', 
+    link: '#' 
+   }, 
+   { 
+    name: 'Laptop Stand', 
+    price: '₹799', 
+    desc: 'Adjustable stand for work and gaming.', 
+    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1200&auto=format&fit=crop', 
+    link: '#' 
+   }, 
+   { 
+    name: 'Phone Holder', 
+    price: '₹399', 
+    desc: '360° rotating mobile holder.', 
+    image: 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=1200&auto=format&fit=crop', 
+    link: '#' 
+    }
+  ];
+return ( <div className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-black text-white font-sans"> <header className="bg-[#131921] p-4 shadow-2xl sticky top-0 z-50 border-b border-zinc-800"> <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"> <div> <h1 className="text-3xl md:text-4xl font-extrabold text-yellow-400">MH Amazon Deals</h1> <p className="text-gray-300 mt-2">Best Amazon Affiliate Products & Daily Deals</p> </div>
+
+<div className="flex items-center bg-white rounded-2xl overflow-hidden w-full md:w-[450px]">
+        <input
+          type="text"
+          placeholder="Search Amazon Products"
+          className="flex-1 px-4 py-3 text-black outline-none"
+        />
+        <button className="bg-yellow-400 text-black px-6 py-3 font-bold">
+          Search
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section className="bg-gradient-to-r from-yellow-500 to-orange-500 text-center py-20 px-4">
+    <h2 className="text-5xl md:text-6xl text-black font-extrabold leading-tight mb-6">
+      Discover Trending Products
+    </h2>
+
+    <p className="text-black max-w-3xl mx-auto text-lg font-medium">
+      Explore the latest gadgets, accessories, gaming gear, and smart tech products with the best Amazon deals.
+    </p>
+  </section>
+
+  <section className="px-6 pb-20 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {products.map((product, index) => (
+        <div
+          key={index}
+          className="bg-white text-black rounded-[30px] overflow-hidden shadow-2xl hover:scale-105 transition duration-300 border border-zinc-200"
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-72 object-cover"
+          />
+
+          <div className="p-6">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-2xl font-bold">{product.name}</h3>
+              <span className="bg-green-600 px-3 py-1 rounded-full text-sm font-semibold">
+                {product.price}
+              </span>
+            </div>
+
+            <p className="text-gray-600 mb-6">{product.desc}</p>
+
+            <a
+              href={product.link}
+              className="block text-center bg-yellow-400 hover:bg-yellow-500 px-5 py-4 rounded-2xl font-bold text-lg text-black"
+            >
+              View Deal
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="bg-[#232F3E] py-16 text-center px-6 border-t border-zinc-800">
+    <h2 className="text-4xl font-bold mb-4">Why Choose Us?</h2>
+
+    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10">
+      <div className="bg-zinc-900 p-8 rounded-3xl shadow-xl">
+        <h3 className="text-2xl font-bold mb-3">Best Deals</h3>
+        <p className="text-gray-400">Find top Amazon products at amazing prices.</p>
+      </div>
+
+      <div className="bg-zinc-900 p-8 rounded-3xl shadow-xl">
+        <h3 className="text-2xl font-bold mb-3">Trending Products</h3>
+        <p className="text-gray-400">Latest gadgets and viral products updated regularly.</p>
+      </div>
+
+      <div className="bg-zinc-900 p-8 rounded-3xl shadow-xl">
+        <h3 className="text-2xl font-bold mb-3">Trusted Links</h3>
+        <p className="text-gray-400">Safe Amazon affiliate product links for shopping.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer className="bg-[#131921] text-center py-8 border-t border-zinc-800 text-gray-400 text-sm">
+    © 2026 MH Power Store • Amazon Affiliate Website
+  </footer>
+</div>
+
+); }
